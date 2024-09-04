@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.AddCustomerActivity">
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_weight="3"
+            android:id="@+id/btn_back"
+            android:src="@drawable/img_1"
+            android:layout_width="0dp"
+            android:layout_gravity="start|center"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_weight="10"
+            android:text="Thêm khách hàng mới"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start|center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_weight="3"
+            android:text="Thêm"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:id="@+id/btn_add_customer"
+            android:textSize="15sp"
+            android:layout_gravity="end|center"
+            android:textColor="@color/bg_splash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/line_1"
+        android:layout_below="@id/layout_title"
+        android:background="@color/bg_edt_login"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <ScrollView
+        android:layout_below="@id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Tên khách hàng"
+                android:layout_marginStart="45dp"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:id="@+id/tv_titlename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_field_name"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_titlename"
+                app:hintEnabled="false"
+                android:layout_width="330dp"
+                android:layout_height="50dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:padding="10dp"
+                    android:background="@drawable/custom_edt"
+                    android:hint="Họ và tên khách hàng (*)"
+                    android:inputType="text"
+                    android:id="@+id/edt_name_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:text="Địa chỉ"
+                android:layout_marginStart="45dp"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_below="@id/input_field_name"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv_titleaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_field_address"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_titleaddress"
+                app:hintEnabled="false"
+                android:layout_width="330dp"
+                android:layout_height="50dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:padding="10dp"
+                    android:background="@drawable/custom_edt"
+                    android:hint="Địa chỉ (*)"
+                    android:inputType="text"
+                    android:id="@+id/edt_address_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:text="Số điện thoại"
+                android:layout_marginStart="45dp"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_below="@id/input_field_address"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv_titlesdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_field_phone"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_titlesdt"
+                app:hintEnabled="false"
+                android:layout_width="330dp"
+                android:layout_height="50dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:padding="10dp"
+                    android:background="@drawable/custom_edt"
+                    android:hint="Số điện thoại (*)"
+                    android:inputType="phone"
+                    android:id="@+id/edt_phone_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:text="CCCD/CMND"
+                android:layout_marginStart="45dp"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_below="@id/input_field_phone"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv_titlecccd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_field_cccd"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_titlecccd"
+                app:hintEnabled="false"
+                android:layout_width="330dp"
+                android:layout_height="50dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:padding="10dp"
+                    android:background="@drawable/custom_edt"
+                    android:hint="CCCD/CMND (*)"
+                    android:inputType="number"
+                    android:id="@+id/edt_cccd_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:text="Ngày/tháng/năm sinh"
+                android:layout_marginStart="45dp"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_below="@id/input_field_cccd"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv_titlebirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginBottom="50dp"
+                android:id="@+id/input_field_birthday"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_titlebirthday"
+                app:hintEnabled="false"
+                android:layout_width="330dp"
+                android:layout_height="50dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:padding="10dp"
+                    android:background="@drawable/custom_edt"
+                    android:hint="01/01/2002 (*)"
+                    android:inputType="text"
+                    android:id="@+id/edt_birthday_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <ProgressBar
+        android:indeterminateTint="@color/bg_splash"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+</RelativeLayout>

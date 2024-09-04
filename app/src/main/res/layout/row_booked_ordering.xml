@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                app:layout_constraintBottom_toTopOf="@id/line_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/status_green_circle_24"
+                android:id="@+id/iv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_status"
+                android:text="Đang thuê"
+                android:id="@+id/tv_status"
+                app:layout_constraintBottom_toTopOf="@id/line_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/tv_name_room"
+                android:text="P.101"
+                android:textColor="@color/color_success"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="(Phong doi)"
+                app:layout_constraintStart_toEndOf="@id/tv_name_room"
+                app:layout_constraintBottom_toTopOf="@id/line_1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/grey"
+                android:id="@+id/tv_type_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+          <View
+              app:layout_constraintTop_toBottomOf="@id/tv_name_room"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:background="@color/bg_splash"
+              android:id="@+id/line_1"
+              android:layout_width="match_parent"
+              android:layout_height="2dp"/>
+            <TextView
+                android:text="Le Van A"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line_1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/tv_name_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="000089954884"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_customer"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/grey"
+                android:id="@+id/tv_cccd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/tv_cccd"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="SDT: 0987678543"
+                android:id="@+id/tv_phone"
+                android:textColor="@color/grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Gia: 200 000 VND"
+                android:textColor="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_price_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Ngay dat: 14/02/2024"
+                app:layout_constraintTop_toBottomOf="@id/tv_price_room"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_date_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Ngay tra: 14/02/2024"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_book"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_date_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/tv_date_return"
+                android:text="Tong Tien: 400 000 VND/2 ngay"
+                android:textColor="@color/color_success"
+                android:textStyle="bold"
+                android:id="@+id/tv_sum_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:text="Xóa"
+            android:layout_margin="10dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:id="@+id/action_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_splash">#0071FE</color>
+    <color name="bg_edt_login">#E5E5E5</color>
+    <color name="color_success">#00BFA5</color>
+    <color name="red_error">#C51162</color>
+    <color name="black_custom">#01070F</color>
+    <color name="email_color">#898C8F</color>
+    <color name="grey">#7F7C7C</color>
+    <color name="red">#ff00</color>
+    <color name="booked_grey">#E1DBDB</color>
+</resources>

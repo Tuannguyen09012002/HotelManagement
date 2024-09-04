@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AccountFragment">
+
+  <LinearLayout
+      android:id="@+id/layout_toolbar"
+      android:weightSum="16"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="60dp">
+      <ImageView
+          android:layout_weight="3"
+          android:id="@+id/btn_back"
+          android:src="@drawable/img_1"
+          android:layout_width="0dp"
+          android:layout_gravity="start|center"
+          android:layout_height="30dp"/>
+      <TextView
+          android:layout_weight="10"
+          android:text="Tài khoản"
+          android:textSize="20sp"
+          android:textColor="@color/black"
+          android:textStyle="bold"
+          android:layout_gravity="start|center"
+          android:gravity="center"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+    <View
+        android:layout_below="@id/layout_toolbar"
+        android:background="@color/bg_edt_login"
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <ImageView
+        android:id="@+id/image_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/line1"
+        android:src="@drawable/img_8"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+    <TextView
+        android:layout_below="@id/image_avatar"
+        android:text="Name Hotel"
+        android:id="@+id/tv_name_hotel"
+        android:textSize="18sp"
+        android:textColor="@color/black_custom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_below="@id/tv_name_hotel"
+        android:text="email admin"
+        android:id="@+id/tv_email"
+        android:textSize="13sp"
+        android:textColor="@color/email_color"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ListView
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/listview"
+        android:layout_below="@id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

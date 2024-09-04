@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/img_5"
+            android:layout_margin="10dp"
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:text="Change your password"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_centerVertical="true"
+            android:textColor="@color/grey"
+            android:textSize="17sp"
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/img_9"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.NotifiRoomCreatedActivity">
+    <ImageView
+        android:id="@+id/image_1"
+        android:layout_centerInParent="true"
+        android:src="@drawable/img_7"
+        android:layout_width="121.56dp"
+        android:layout_height="120.58dp"/>
+    <TextView
+        android:text="Phòng đã được tạo"
+        android:textColor="@color/black"
+        android:layout_below="@id/image_1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_below="@id/tv_1"
+        android:background="@drawable/custom_edt"
+        android:backgroundTint="@color/bg_splash"
+        android:text="Xem phòng"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_view_room"
+        android:layout_width="136dp"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>

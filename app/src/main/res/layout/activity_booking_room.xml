@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mainLayout"
+    android:layout_height="match_parent"
+    tools:context=".activitys.BookingRoomActivity">
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_weight="3"
+            android:id="@+id/btn_back"
+            android:src="@drawable/img_1"
+            android:layout_width="0dp"
+            android:layout_gravity="start|center"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_weight="10"
+            android:text="Đặt phòng"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start|center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/line_1"
+        android:layout_below="@id/layout_title"
+        android:background="@color/bg_edt_login"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/line_1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:text="Tên phòng: "
+              android:textSize="16sp"
+              android:id="@+id/label1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:layout_toEndOf="@id/label1"
+              android:text="P.705"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              android:textColor="@color/color_success"
+              android:layout_marginStart="10dp"
+              android:id="@+id/tv_nameRoom"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+      </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Giá phòng: "
+                android:textSize="16sp"
+                android:id="@+id/label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_toEndOf="@id/label2"
+                android:text="200 000 VND"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/red_error"
+                android:layout_marginStart="10dp"
+                android:id="@+id/tv_priceRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Loại phòng: "
+                android:textSize="16sp"
+                android:id="@+id/label3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_toEndOf="@id/label3"
+                android:text="Phong Don"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/bg_splash"
+                android:layout_marginStart="10dp"
+                android:id="@+id/tv_typeRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <TextView
+            android:text="Thông tin khách hàng"
+            android:textColor="@color/color_success"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_marginTop="10sp"
+            android:background="@drawable/custom_edt"
+            android:hint="Họ và tên khách hàng (*)"
+            android:id="@+id/tv_name_customer"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <EditText
+            android:layout_marginTop="20sp"
+            android:background="@drawable/custom_edt"
+            android:hint="CCCD/CMND (*)"
+            android:id="@+id/tv_cccd_customer"
+            android:padding="10dp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <EditText
+            android:layout_marginTop="20sp"
+            android:background="@drawable/custom_edt"
+            android:hint="Số điện thoại khách hàng (*)"
+            android:id="@+id/tv_phone_customer"
+            android:padding="10dp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <TextView
+            android:text="Ngày/giờ đặt phòng"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:orientation="horizontal"
+           android:weightSum="2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/edt_dateIn"
+               android:layout_weight="1"
+               android:hint="dd/mm/yyyy"
+               android:gravity="center"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"/>
+
+
+
+
+       </LinearLayout>
+        <TextView
+            android:text="Ngày/giờ trả phòng"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/edt_dateOut"
+                android:layout_weight="1"
+                android:hint="dd/mm/yyyy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <CheckBox
+            android:layout_marginTop="10dp"
+            android:text="Đã thanh toán"
+            android:textColor="@color/color_success"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id="@+id/ischeck_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginBottom="10dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatButton
+        android:text="Hủy"
+        android:id="@+id/btn_cancel"
+        android:background="@color/grey"
+        android:layout_weight="1"
+        android:layout_marginEnd="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_confirm_booking"
+        android:text="Xác nhận đặt phòng"
+        android:background="@color/bg_splash"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/bg_splash"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+</RelativeLayout>

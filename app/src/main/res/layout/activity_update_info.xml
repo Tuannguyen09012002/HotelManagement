@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    tools:context=".activitys.UpdateInfoActivity">
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_weight="3"
+            android:id="@+id/btn_back"
+            android:src="@drawable/img_1"
+            android:layout_width="0dp"
+            android:layout_gravity="start|center"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_weight="10"
+            android:text="Cập nhật thông tin"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start|center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/line_1"
+        android:layout_below="@id/layout_title"
+        android:background="@color/bg_edt_login"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/line_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            app:hintEnabled="false"
+            android:layout_width="330dp"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:background="@drawable/custom_edt"
+                android:hint="Nhập tên khách sạn (*)"
+                android:inputType="text"
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="30dp"
+            app:hintEnabled="false"
+            android:layout_width="330dp"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:background="@drawable/custom_edt"
+                android:hint="Nhập số điện thoại (*)"
+                android:inputType="phone"
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="30dp"
+            app:hintEnabled="false"
+            android:layout_width="330dp"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:background="@drawable/custom_edt"
+                android:hint="Link facebook/zalo"
+                android:inputType="text"
+                android:id="@+id/edt_link_zalo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="30dp"
+            android:elevation="10dp"
+            android:shadowRadius="10"
+            android:textColor="@color/white"
+            android:id="@+id/btn_updateinfo"
+            android:text="Cập nhật"
+            android:background="@drawable/custom_edt"
+            android:backgroundTint="@color/bg_splash"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:layout_width="330dp"
+            android:layout_height="55dp"/>
+        <ProgressBar
+            android:layout_marginTop="20dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/bg_splash"
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

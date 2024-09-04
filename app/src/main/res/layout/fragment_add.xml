@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddFragment">
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:weightSum="16"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_weight="3"
+            android:id="@+id/btn_back"
+            android:src="@drawable/img_1"
+            android:layout_width="0dp"
+            android:layout_gravity="start|center"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_weight="10"
+            android:text="@string/add_room_string"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start|center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_gravity="end|center"
+            android:text="Thêm"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/bg_splash"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:layout_weight="3"
+            android:id="@+id/btn_create_room"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+   <ScrollView
+       android:layout_below="@id/layout1"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <TextView
+               android:text="Tên phòng"
+               android:layout_marginStart="45dp"
+               android:layout_alignParentStart="true"
+               android:textStyle="bold"
+               android:layout_marginTop="30dp"
+               android:id="@+id/tv_title1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/input_field_name"
+               android:layout_marginTop="5dp"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@id/tv_title1"
+               app:hintEnabled="false"
+               android:layout_width="330dp"
+               android:layout_height="50dp">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:padding="10dp"
+                   android:background="@drawable/custom_edt"
+                   android:hint="Nhập tên phòng"
+                   android:inputType="number"
+                   android:id="@+id/edt_name_room"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <TextView
+               android:text="Giá phòng"
+               android:layout_below="@id/input_field_name"
+               android:layout_marginStart="45dp"
+               android:layout_alignParentStart="true"
+               android:textStyle="bold"
+               android:layout_marginTop="20dp"
+               android:id="@+id/tv_title2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/input_field_price"
+               android:layout_marginTop="5dp"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@id/tv_title2"
+               app:hintEnabled="false"
+               android:layout_width="330dp"
+               android:layout_height="50dp">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:padding="10dp"
+                   android:background="@drawable/custom_edt"
+                   android:hint="Nhập giá thuê phòng  E.g: 200000"
+                   android:inputType="number"
+                   android:id="@+id/edt_price_room"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <TextView
+               android:text="Chọn loại phòng"
+               android:layout_below="@id/input_field_price"
+               android:layout_marginStart="45dp"
+               android:layout_alignParentStart="true"
+               android:textStyle="bold"
+               android:layout_marginTop="20dp"
+               android:id="@+id/tv_title5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <Spinner
+               android:background="@drawable/custom_edt"
+               android:padding="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_centerHorizontal="true"
+               android:id="@+id/spinner_room"
+               android:layout_below="@id/tv_title5"
+               android:layout_width="330dp"
+               android:layout_height="50dp"/>
+           <TextView
+               android:text="Mô tả phòng ở"
+               android:layout_below="@id/spinner_room"
+               android:layout_marginStart="45dp"
+               android:layout_alignParentStart="true"
+               android:textStyle="bold"
+               android:layout_marginTop="20dp"
+               android:id="@+id/tv_title3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <CheckBox
+               android:text="Có ban công"
+               android:id="@+id/check_btn_bancong"
+               android:layout_below="@id/tv_title3"
+               android:layout_marginStart="45dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <CheckBox
+               android:layout_below="@id/check_btn_bancong"
+               android:layout_marginStart="45dp"
+               android:text="Có máy lạnh"
+               android:id="@+id/check_btn_maylanhroom"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+          
+           <CheckBox
+               android:layout_below="@id/check_btn_maylanhroom"
+               android:layout_marginStart="45dp"
+               android:text="Loại phòng view thành phố"
+               android:id="@+id/check_btn_viewcity"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <EditText
+               android:layout_below="@id/check_btn_viewcity"
+               android:layout_marginStart="35dp"
+               android:gravity="top"
+               android:padding="10dp"
+               android:layout_marginTop="10dp"
+               android:id="@+id/edt_description"
+               android:layout_marginEnd="35dp"
+               android:hint="Thêm mô tả phòng..."
+               android:background="@drawable/custom_edt"
+               android:layout_width="match_parent"
+               android:layout_height="150dp"/>
+           <TextView
+               android:text="Thêm hình ảnh phòng"
+               android:layout_below="@id/edt_description"
+               android:layout_marginStart="45dp"
+               android:layout_alignParentStart="true"
+               android:textStyle="bold"
+               android:layout_marginTop="20dp"
+               android:id="@+id/tv_title4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           
+          <LinearLayout
+              android:layout_marginTop="10dp"
+              android:layout_marginStart="30dp"
+              android:layout_marginEnd="30dp"
+              android:layout_centerHorizontal="true"
+              android:id="@+id/layout_image"
+              android:orientation="vertical"
+              android:layout_below="@id/tv_title4"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <LinearLayout
+                  android:weightSum="2"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+                  <ImageView
+                      android:scaleType="centerCrop"
+                      android:layout_marginEnd="3dp"
+                      android:id="@+id/imageRoom1"
+                      android:layout_weight="1"
+                      android:src="@drawable/baseline_image_24"
+                      android:layout_width="0dp"
+                      android:layout_height="150dp"/>
+                  <ImageView
+                      android:scaleType="centerCrop"
+                      android:layout_marginStart="3dp"
+                      android:id="@+id/imageRoom2"
+                      android:layout_weight="1"
+                      android:src="@drawable/baseline_image_24"
+                      android:layout_width="0dp"
+                      android:layout_height="150dp"/>
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_marginTop="10dp"
+                  android:weightSum="2"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+                  <ImageView
+                      android:scaleType="centerCrop"
+                      android:layout_marginEnd="3dp"
+                      android:id="@+id/imageRoom3"
+                      android:layout_weight="1"
+                      android:src="@drawable/baseline_image_24"
+                      android:layout_width="0dp"
+                      android:layout_height="150dp"/>
+                  <ImageView
+                      android:scaleType="centerCrop"
+                      android:layout_marginStart="3dp"
+                      android:id="@+id/imageRoom4"
+                      android:layout_weight="1"
+                      android:src="@drawable/baseline_image_24"
+                      android:layout_width="0dp"
+                      android:layout_height="150dp"/>
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+
+
+
+       </RelativeLayout>
+
+
+   </ScrollView>
+
+
+</RelativeLayout>

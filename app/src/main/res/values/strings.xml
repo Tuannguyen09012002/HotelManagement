@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HotelManager</string>
+    <string name="login_text">Login</string>
+    <string name="login_string">Đăng Nhập</string>
+    <string name="signup_string">Đăng Ký</string>
+    <string name="forgotpass_string">Quên mật khẩu</string>
+    <string name="l_y_m_t_kh_u">Lấy mật khẩu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_room_string">Thêm phòng</string>
+    <string name="list_room_string">Danh sách phòng</string>
+
+
+    <string-array name="room_types">
+        <item>Phòng đơn</item>
+        <item>Phòng đôi</item>
+        <item>Phòng VIP</item>
+    </string-array>
+</resources>
